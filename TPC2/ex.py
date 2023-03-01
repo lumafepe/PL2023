@@ -1,4 +1,4 @@
-
+import sys
 def areSameType(x,y):
     if x=='':return True
     if x=='=': return False
@@ -8,8 +8,8 @@ soma=0
 
 stringPart=""
 capturing=True
-while line:= input().lower():
-    for c in line:
+for line in sys.stdin:
+    for c in line.lower():
         if areSameType(stringPart,c):
             stringPart+=c
             if '=' in stringPart:
